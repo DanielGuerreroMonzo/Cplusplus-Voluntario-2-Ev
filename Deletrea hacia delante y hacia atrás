@@ -1,0 +1,20 @@
+#include<iostream>
+
+int main()
+{
+    using namespace std;
+    string palabra;
+    cout << "Escribe una palabra para poder deletrearla --> ";
+    cin >> palabra;
+    cout<<"HACIA DELANTE :"<<endl;
+	for (int num = 0; num < palabra.length(); num++){
+        cout << num+1 << ". " << palabra[num] << endl;
+    }
+
+	cout << "Y HACIA ATRAS :"<<endl;
+    for (int num = palabra.length(); num >=1; num--){
+
+		cout <<palabra.length()-num << ". " << palabra[num-1] << endl;
+    }
+    return 0;
+}
