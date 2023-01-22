@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    srand(time(0));
+    int dinero = 200;
+    int apuesta;
+    while (dinero > 0) {
+        cout << "Tienes " << dinero << " euros "<<endl<< "Cuanto apuestas ---> ";
+        cin >> apuesta;
+        if (apuesta > dinero) {
+            cout << "No tienes tanto dinero" << endl;
+            continue;
+        }
+        if (apuesta <= 0) {
+            cout << "No se por que quieres apostar sin nada" << endl;
+            continue;
+        }
+        int randomNumber = rand() % 3;
+        if (randomNumber == 0) {
+            cout << "Ganaste"<<" " << apuesta*1.5<<" euros"<<endl;
+            dinero += apuesta*1.5;
+        } else {
+            cout << "Perdiste"<<" " << apuesta<<" euros"<<endl;
+            dinero -= apuesta;
+        }
+    }
+    cout << "Te has quedado sin pasta, adios" << endl;
+    return 0;
+}
