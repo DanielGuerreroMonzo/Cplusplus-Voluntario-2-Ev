@@ -19,8 +19,8 @@ int main() {
             cout << "No se por que quieres apostar sin nada" << endl;
             continue;
         }
-        int randomNumber = rand() % 3;
-        if (randomNumber == 0) {
+        int aleatorio = rand() % 3;
+        if (aleatorio == 0) {
             cout << "Ganaste"<<" " << apuesta*1.5<<" euros"<<endl;
             dinero += apuesta*1.5;
         } else {
