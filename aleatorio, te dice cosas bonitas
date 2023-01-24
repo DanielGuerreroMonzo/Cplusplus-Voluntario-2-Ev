@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+
+using namespace std;
+
+int main() {
+  string frases_bonitas[] = {
+    "Eres una persona maravillosa",
+    "Tu sonrisa es contagiosa",
+    "Eres una fuente de inspiración para los demás",
+    "Eres muy valioso para las personas que te rodean",
+    "Tienes un gran corazón"
+  };
+  int num_frases = 5;
+  srand(time(0));
+  int aleatorio = rand() % num_frases;
+  cout << frases_bonitas[aleatorio] << endl;
+  return 0;
+}
