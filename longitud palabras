@@ -1,0 +1,24 @@
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+
+const int MAX_LONGITUD = 100;
+
+bool compararLongitud(const char *a, const char *b) {
+  return strlen(a) < strlen(b);
+}
+
+int main() {
+  char palabra1[MAX_LONGITUD], palabra2[MAX_LONGITUD], palabra3[MAX_LONGITUD];
+
+  std::cout << "Escribe 3 palbras --> ";
+  std::cin >> palabra1 >> palabra2 >> palabra3;
+
+  char *palabras[3] = {palabra1, palabra2, palabra3};
+  std::sort(palabras, palabras + 3, compararLongitud);
+
+  std::cout << "Ordenadas por longitud son --> ";
+  std::cout << palabras[0] << ", " << palabras[1] << ", " << palabras[2] << std::endl;
+
+  return 0;
+}
