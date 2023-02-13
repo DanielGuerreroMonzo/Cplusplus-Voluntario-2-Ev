@@ -10,25 +10,25 @@ int main() {
   srand(time(0));
 
   while (vidae > 0 && vidaj > 0) {
-    cout << "¿Que quieres hacer?" << endl << "1. Atacar con un daño fijo (20 puntos de daño)" << endl << "2. Atacar con un daño aleatorio (entre 10 y 30 puntos de daño)" << endl;
+    cout << "¿Que quieres hacer?" << endl << "1. Atacar con un dano fijo (20 puntos de daño)" << endl << "2. Atacar con un dano aleatorio (entre 10 y 30 puntos de daño)" << endl;
     cout << "-->";
     cin >> opcion;
 
     if (opcion == 1) {
       vidae -= 20;
-      cout << "El pandillero perdió 20 de vida" << endl << "HP ENEMIGO" << endl << "-> " << vidae << " <-" << endl;
+      cout << "El pandillero perdio 20 puntos de vida" << endl << "HP ENEMIGO" << endl << "-> " << vidae << " <-" << endl;
     } else if (opcion == 2) {
-      int dañoe = rand() % 21 + 10;
-      vidae -= dañoe;
-      cout << "El pandillero perdió" << dañoe << "puntos de vida" << endl << "HP ENEMIGO" << endl << "-> " << vidae << " <-" << endl;
+      int danoe = rand() % 21 + 10;
+      vidae -= danoe;
+      cout << "El pandillero perdio " << danoe << " puntos de vida" << endl << "HP ENEMIGO" << endl << "-> " << vidae << " <-" << endl;
     } else {
-      cout << "No me sirve tu respuesta >:(" << endl;
+      cout << "NO ME SIRVE TU RESPUESTA MUERE >:(" << endl <<"NO ME SIRVE TU RESPUESTA MUERE >:(" << endl << "NO ME SIRVE TU RESPUESTA MUERE >:(" << endl;
     }
 
     if (vidae > 0) {
-      int dañoj = rand() % 21 + 10;
-      vidaj -= dañoj;
-      cout << "Perdiste " << dañoj << "puntos de vida" << endl << "TU HP << endl << "-> " << dañoj << " <-" << endl;
+      int danoj = rand() % 21 + 10;
+      vidaj -= danoj;
+      cout << "Perdiste " << danoj << " puntos de vida" << endl << "TU HP" << endl << "-> " << vidaj << " <-" << endl;
     }
   }
 
